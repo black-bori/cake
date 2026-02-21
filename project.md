@@ -55,8 +55,10 @@ Later, we will need to support INT8. Also, when we support GPU, we will need to 
 ## Project architecture
 
 ### Library
+- Library name is cake. libcake.so in Linux, and cake.dll in Windows.
 - Use C++17.
 - Use CMake for build.
+- For coding style, follow Google C++ Style Guide. Use snake_case for function and variable names. Use PascalCase for class names.
 - To handle ONNX model file, use libonnxruntime.
 - If we need to have Linux specific code, create abstract interface and implement it for Linux.
 - Define a structure for each primitive. A primitive is a basic operation in a model, and has input and output tensors. Depending on the primitive type, the primitive may have additional attributes.
@@ -81,3 +83,5 @@ Later, we will need to support INT8. Also, when we support GPU, we will need to 
     - src
     - include
     - test
+- third_party
+    
